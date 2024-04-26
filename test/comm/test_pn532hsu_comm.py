@@ -8,7 +8,7 @@ from pn532pi.interfaces import pn532hsu
 
 class TestPn532hsuComm(TestCase):
     def setUp(self):
-        self.pn532 = pn532hsu(0)
+        self.pn532 = pn532hsu.Pn532Hsu('usbserial-10')
         self.pn532.begin()
 
     def test_getFirmware(self):
